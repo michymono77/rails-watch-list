@@ -1,1 +1,115 @@
 // Specific CSS for your home-page
+.container {
+  margin: 50px auto;
+  width: 700px;
+}
+
+.link {
+    text-decoration: none !important;
+}
+
+.all-main{
+  position: fixed;
+  left: 240px;
+
+}
+
+a {
+    text-decoration: none !important;
+}
+
+img {
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  margin-bottom: 32px;
+  margin-top: 32px;
+}
+// img {
+//   transition: transform .7s ease-in-out;
+// }
+// img:hover {
+//   transform: rotate(360deg);
+// }
+
+// .img-container {
+//   position: relative;
+//   width: 50%;
+// }
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 100%;
+  right: 0;
+  background-color:rgba(255, 0, 0, 0.3);
+  overflow: hidden;
+  width: 0;
+  height: 100%;
+  transition: .8s ease;
+}
+
+.img-container:hover .overlay {
+  width: 100%;
+  left: 0;
+}
+
+.text {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  white-space: nowrap;
+}
+.text-star
+ {
+  font-size: 32px;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  white-space: nowrap;
+  display: inline;
+}
+
+
+.listing {
+  ul {
+    counter-reset: index;
+    padding: 0;
+    max-width: 300px;
+  }
+
+  /* List element */
+  li {
+    counter-increment: index;
+    display: flex;
+    align-items: center;
+    padding: 12px 0;
+    box-sizing: border-box;
+  }
+
+
+  /* Element counter */
+  li::before {
+    content: counters(index, ".", decimal-leading-zero);
+    font-size: 1.5rem;
+    text-align: right;
+    font-weight: bold;
+    min-width: 50px;
+    padding-right: 12px;
+    font-variant-numeric: tabular-nums;
+    align-self: flex-start;
+    background-image: linear-gradient(to bottom, aquamarine, orangered);
+    background-attachment: fixed;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+
+  /* Element separation */
+  li + li {
+    border-top: 1px solid rgba(255,255,255,0.2);
+  }
+}

@@ -1,0 +1,16 @@
+<div class ="container">
+  <h1 class="all-main">All Movies</h1>
+  <div class="row">
+    <% @movies.each do |movie| %>
+    <div class="img-container col-lg-6">
+      <%= image_tag movie.poster_url, alt: "movie", width: 320 %>
+      <div class="overlay">
+      <p class="text"><%= movie.title %></p>
+      <p class="text-star"><% movie.rating.times do %></p>
+      <i style="color:white;text-align:center;diplay:inline;font-size:32px;" class="fas fa-star"></i>
+      <% end %>
+      </div>
+  </div>
+<% end %>
+</div>
+</div>
