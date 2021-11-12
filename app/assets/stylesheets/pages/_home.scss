@@ -93,7 +93,6 @@ img {
     box-sizing: border-box;
   }
 
-
   /* Element counter */
   li::before {
     content: counters(index, ".", decimal-leading-zero);
