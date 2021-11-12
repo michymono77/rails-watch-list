@@ -12,10 +12,12 @@
       <br>
       <h4 style="text-align:center"><%= bookmark.movie.title %></h4>
       <br>
-      <p style="text-align:end;"><i><%= bookmark.comment %><%= link_to list_bookmark_path(bookmark), method: :delete, data: { confirm: "Do you want to delete #{bookmark.movie.title}" } do %></i>
+      <p><%= bookmark.movie.overview %></p>
+      <br>
+      <p style="font-weight:bold">Comment: </p>
+      <p><i><%= bookmark.comment %></i><%= link_to list_bookmark_path(bookmark), method: :delete, data: { confirm: "Do you want to delete #{bookmark.movie.title}" } do %>
                 <i class="far fa-trash-alt"></i>
                 <% end %></p>
-
 
       <br>
       <br>
