@@ -6,7 +6,7 @@
 <div class="row">
   <% if @list.bookmarks.any? %>
     <% @list.bookmarks.each do |bookmark| %>
-      <div class="img-container col-lg-4">
+      <div class="img-container col-lg-4 mr-5">
       <%= image_tag bookmark.movie.poster_url, alt: "movie", width: 200 %>
       <h4><%= bookmark.movie.title %></h4>
       <p><%= bookmark.comment %></p>
