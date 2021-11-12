@@ -6,16 +6,16 @@
 <div class="row">
   <% if @list.bookmarks.any? %>
     <% @list.bookmarks.each do |bookmark| %>
-    <div class="img-container col-lg-4">
-    <%= image_tag bookmark.movie.poster_url, alt: "movie", width: 200 %>
-    <h4><%= bookmark.movie.title %></h4>
-    <p><%= bookmark.comment %></p>
-    <%= link_to list_bookmark_path(bookmark), method: :delete, data: { confirm: "Do you want to delete #{bookmark.movie.title}" } do %>
-              <i class="far fa-trash-alt"></i>
-              <% end %>
-    <br>
-    <br>
-    </div>
+      <div class="img-container col-lg-4">
+      <%= image_tag bookmark.movie.poster_url, alt: "movie", width: 200 %>
+      <h4><%= bookmark.movie.title %></h4>
+      <p><%= bookmark.comment %></p>
+      <%= link_to list_bookmark_path(bookmark), method: :delete, data: { confirm: "Do you want to delete #{bookmark.movie.title}" } do %>
+                <i class="far fa-trash-alt"></i>
+                <% end %>
+      <br>
+      <br>
+      </div>
     <% end %>
   <% else %>
     <i>No bookmarks yet...</i>
@@ -23,7 +23,7 @@
 </div>
 <br>
 <br>
-<%= link_to "Add a bookmark",  bookmarks_new_path, class:"btn btn-primary" %>
+<%= link_to "Add a bookmark",  new_list_bookmark_path(@list), class:"btn btn-primary" %>
 
 <%= link_to lists_path do%>
 <p><i class="fas fa-undo"></i></p>
